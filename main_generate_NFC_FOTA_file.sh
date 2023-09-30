@@ -68,7 +68,7 @@ check_multiple $HEADER $HEADERSIZE $ALIGNB $SHOULDNOTPAD
 
 ## Generate NFC FOTA file
 #NFC_FOTA_FILE=""$FILENAME"_NFC_FOTA."$FILETYPE""
-NFC_FOTA_FILE=""$FILENAME"_FW_Upgrade_example"$FILETYPE""
+NFC_FOTA_FILE=""$FILENAME"_FW_Upgrade_example."$FILETYPE""
 cat $HEADER $FILE | tee $NFC_FOTA_FILE &>/dev/null
 
 ## Final file size should be multiple of 8 bytes
