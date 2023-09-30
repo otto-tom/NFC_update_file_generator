@@ -51,7 +51,7 @@ FILESIZE=$(stat -c%s "$FILE")
 check_multiple $FILE $FILESIZE $ALIGNB $SHOULDPAD
 
 ## Call Python script to generate header file
-HEADER=$(python header_generator.py $FILENAME)
+HEADER=$(python3 header_generator.py $FILENAME)
 ## Check if Python script exited successfully
 if [ $? -ne 0 ]; then
     echo -e "${_RED}${_TBLD}E!${_TNT}: Please provide FW_FILE_NAME (no extension, should be .bin)"
